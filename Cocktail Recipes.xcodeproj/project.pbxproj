@@ -13,6 +13,12 @@
 		EDB0D0EB2857F41A00772872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0EA2857F41A00772872 /* Assets.xcassets */; };
 		EDB0D0EE2857F41A00772872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0EC2857F41A00772872 /* LaunchScreen.storyboard */; };
 		EDB0D0F82857F46C00772872 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0F72857F46C00772872 /* Cocktail.swift */; };
+		EDB0D0FB2857F7D300772872 /* Network Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0FA2857F7D300772872 /* Network Controller.swift */; };
+		EDB0D0FD2857F86700772872 /* GoogleService-Info-4.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */; };
+		EDB0D1002857F9B000772872 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EDB0D0FF2857F9B000772872 /* FirebaseDatabase */; };
+		EDB0D1022857F9B000772872 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */; };
+		EDB0D105285802B700772872 /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D104285802B700772872 /* CocktailListViewModel.swift */; };
+		EDB0D107285802EC00772872 /* CocktailListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		EDB0D0ED2857F41A00772872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDB0D0EF2857F41A00772872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB0D0F72857F46C00772872 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		EDB0D0FA2857F7D300772872 /* Network Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Controller.swift"; sourceTree = "<group>"; };
+		EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-4.plist"; sourceTree = "<group>"; };
+		EDB0D104285802B700772872 /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
+		EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB0D1022857F9B000772872 /* FirebaseDatabaseSwift in Frameworks */,
+				EDB0D1002857F9B000772872 /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,9 @@
 		EDB0D0E02857F41700772872 /* Cocktail Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */,
+				EDB0D1032858029100772872 /* Views */,
+				EDB0D0F92857F7C100772872 /* Helper Files */,
 				EDB0D0F62857F45200772872 /* Models */,
 				EDB0D0F52857F42200772872 /* Resources */,
 				EDB0D0E72857F41700772872 /* Main.storyboard */,
@@ -83,6 +98,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EDB0D0F92857F7C100772872 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB0D0FA2857F7D300772872 /* Network Controller.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		EDB0D1032858029100772872 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDB0D104285802B700772872 /* CocktailListViewModel.swift */,
+				EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +131,10 @@
 			dependencies = (
 			);
 			name = "Cocktail Recipes";
+			packageProductDependencies = (
+				EDB0D0FF2857F9B000772872 /* FirebaseDatabase */,
+				EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */,
+			);
 			productName = "Cocktail Recipes";
 			productReference = EDB0D0DE2857F41700772872 /* Cocktail Recipes.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +163,9 @@
 				Base,
 			);
 			mainGroup = EDB0D0D52857F41700772872;
+			packageReferences = (
+				EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EDB0D0DF2857F41700772872 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB0D0FD2857F86700772872 /* GoogleService-Info-4.plist in Resources */,
 				EDB0D0EE2857F41A00772872 /* LaunchScreen.storyboard in Resources */,
 				EDB0D0EB2857F41A00772872 /* Assets.xcassets in Resources */,
 				EDB0D0E92857F41700772872 /* Main.storyboard in Resources */,
@@ -155,6 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB0D0E22857F41700772872 /* AppDelegate.swift in Sources */,
+				EDB0D105285802B700772872 /* CocktailListViewModel.swift in Sources */,
+				EDB0D0FB2857F7D300772872 /* Network Controller.swift in Sources */,
+				EDB0D107285802EC00772872 /* CocktailListTableViewController.swift in Sources */,
 				EDB0D0E42857F41700772872 /* SceneDelegate.swift in Sources */,
 				EDB0D0F82857F46C00772872 /* Cocktail.swift in Sources */,
 			);
@@ -304,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cocktail Recipes/Info.plist";
+				INFOPLIST_FILE = "Cocktail Recipes/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cocktail Recipes/Info.plist";
+				INFOPLIST_FILE = "Cocktail Recipes/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -372,6 +415,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDB0D0FF2857F9B000772872 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDB0D0D62857F41700772872 /* Project object */;
 }
