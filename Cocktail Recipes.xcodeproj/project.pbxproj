@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED187781285A6DEB0016358A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ED187780285A6DEB0016358A /* FirebaseFirestore */; };
+		ED187783285A6DF10016358A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED187782285A6DF10016358A /* FirebaseFirestoreSwift */; };
+		ED187785285A6DF70016358A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ED187784285A6DF70016358A /* FirebaseStorage */; };
 		EDB0D0E22857F41700772872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0E12857F41700772872 /* AppDelegate.swift */; };
 		EDB0D0E42857F41700772872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0E32857F41700772872 /* SceneDelegate.swift */; };
 		EDB0D0E92857F41700772872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0E72857F41700772872 /* Main.storyboard */; };
 		EDB0D0EB2857F41A00772872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0EA2857F41A00772872 /* Assets.xcassets */; };
 		EDB0D0EE2857F41A00772872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0EC2857F41A00772872 /* LaunchScreen.storyboard */; };
 		EDB0D0F82857F46C00772872 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0F72857F46C00772872 /* Cocktail.swift */; };
-		EDB0D0FB2857F7D300772872 /* Network Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0FA2857F7D300772872 /* Network Controller.swift */; };
+		EDB0D0FB2857F7D300772872 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D0FA2857F7D300772872 /* FirebaseService.swift */; };
 		EDB0D0FD2857F86700772872 /* GoogleService-Info-4.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */; };
-		EDB0D1002857F9B000772872 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EDB0D0FF2857F9B000772872 /* FirebaseDatabase */; };
-		EDB0D1022857F9B000772872 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */; };
 		EDB0D105285802B700772872 /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D104285802B700772872 /* CocktailListViewModel.swift */; };
 		EDB0D107285802EC00772872 /* CocktailListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +31,7 @@
 		EDB0D0ED2857F41A00772872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDB0D0EF2857F41A00772872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB0D0F72857F46C00772872 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
-		EDB0D0FA2857F7D300772872 /* Network Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Controller.swift"; sourceTree = "<group>"; };
+		EDB0D0FA2857F7D300772872 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-4.plist"; sourceTree = "<group>"; };
 		EDB0D104285802B700772872 /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
 		EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListTableViewController.swift; sourceTree = "<group>"; };
@@ -41,19 +42,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB0D1022857F9B000772872 /* FirebaseDatabaseSwift in Frameworks */,
-				EDB0D1002857F9B000772872 /* FirebaseDatabase in Frameworks */,
+				ED187781285A6DEB0016358A /* FirebaseFirestore in Frameworks */,
+				ED187783285A6DF10016358A /* FirebaseFirestoreSwift in Frameworks */,
+				ED187785285A6DF70016358A /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED18777D285A6B890016358A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				EDB0D104285802B700772872 /* CocktailListViewModel.swift */,
+				EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		ED18777E285A6B9E0016358A /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		ED18777F285A6DEB0016358A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED187786285A7BA20016358A /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		EDB0D0D52857F41700772872 = {
 			isa = PBXGroup;
 			children = (
 				EDB0D0E02857F41700772872 /* Cocktail Recipes */,
 				EDB0D0DF2857F41700772872 /* Products */,
+				ED18777F285A6DEB0016358A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,9 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				EDB0D0FC2857F86700772872 /* GoogleService-Info-4.plist */,
-				EDB0D1032858029100772872 /* Views */,
-				EDB0D0F92857F7C100772872 /* Helper Files */,
 				EDB0D0F62857F45200772872 /* Models */,
+				EDB0D0F92857F7C100772872 /* Helper Files */,
+				EDB0D1032858029100772872 /* Views */,
 				EDB0D0F52857F42200772872 /* Resources */,
 				EDB0D0E72857F41700772872 /* Main.storyboard */,
 				EDB0D0EC2857F41A00772872 /* LaunchScreen.storyboard */,
@@ -101,7 +134,7 @@
 		EDB0D0F92857F7C100772872 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				EDB0D0FA2857F7D300772872 /* Network Controller.swift */,
+				EDB0D0FA2857F7D300772872 /* FirebaseService.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -109,8 +142,9 @@
 		EDB0D1032858029100772872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EDB0D104285802B700772872 /* CocktailListViewModel.swift */,
-				EDB0D106285802EC00772872 /* CocktailListTableViewController.swift */,
+				ED187786285A7BA20016358A /* Custom Cell */,
+				ED18777E285A6B9E0016358A /* DetailView */,
+				ED18777D285A6B890016358A /* TableView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,8 +166,9 @@
 			);
 			name = "Cocktail Recipes";
 			packageProductDependencies = (
-				EDB0D0FF2857F9B000772872 /* FirebaseDatabase */,
-				EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */,
+				ED187780285A6DEB0016358A /* FirebaseFirestore */,
+				ED187782285A6DF10016358A /* FirebaseFirestoreSwift */,
+				ED187784285A6DF70016358A /* FirebaseStorage */,
 			);
 			productName = "Cocktail Recipes";
 			productReference = EDB0D0DE2857F41700772872 /* Cocktail Recipes.app */;
@@ -196,7 +231,7 @@
 			files = (
 				EDB0D0E22857F41700772872 /* AppDelegate.swift in Sources */,
 				EDB0D105285802B700772872 /* CocktailListViewModel.swift in Sources */,
-				EDB0D0FB2857F7D300772872 /* Network Controller.swift in Sources */,
+				EDB0D0FB2857F7D300772872 /* FirebaseService.swift in Sources */,
 				EDB0D107285802EC00772872 /* CocktailListTableViewController.swift in Sources */,
 				EDB0D0E42857F41700772872 /* SceneDelegate.swift in Sources */,
 				EDB0D0F82857F46C00772872 /* Cocktail.swift in Sources */,
@@ -428,15 +463,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EDB0D0FF2857F9B000772872 /* FirebaseDatabase */ = {
+		ED187780285A6DEB0016358A /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
+			productName = FirebaseFirestore;
 		};
-		EDB0D1012857F9B000772872 /* FirebaseDatabaseSwift */ = {
+		ED187782285A6DF10016358A /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
+			productName = FirebaseFirestoreSwift;
+		};
+		ED187784285A6DF70016358A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB0D0FE2857F9B000772872 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
